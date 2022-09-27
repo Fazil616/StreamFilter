@@ -12,8 +12,8 @@ public class FilterExample {
         list.add(new Product(5, "Hibiscus", 3000));
         list.add(new Product(6, "Exora", 3500));
         //filter price <2000
-        list.stream().filter(p -> p.price < 2000)
-                .forEach(System.out::println);
+        list.stream().filter(p -> p.price < 2000) //Converting List Into Stream
+                .forEach(System.out::println); //Doble :: is Known As Method Refernce
         //filter Starts from"L"
         list.stream().filter(product -> product.name.startsWith("L"))
                 .forEach(ele -> System.out.println(ele));
